@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap");
+
+:root {
+  /* primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* primary 0.1 */
+  --light-red-01: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow-01: hsla(39, 100%, 56%, 0.1);
+  --green-teal-01: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue-01: hsla(234, 85%, 45%, 0.1);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 650px;
+  height: 450px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: grid;
+  gap: 1rem;
+  background-image: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  border-radius: 2rem;
+  width: 50%;
+  /* height: 100%; */
+  text-align: center;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.left .result {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+.left .circle {
+  background-image: linear-gradient(
+    to top,
+    var(--persian-blue),
+    var(--violet-blue)
+  );
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  color: var(--white);
+  display: grid;
+  align-items: center;
+}
+
+.left .circle span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  align-self: center;
+  display: block;
+}
+
+.left .great {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.left .desc {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+.right {
+  display: grid;
+  gap: 1.2rem;
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  /* height: 100%; */
+  padding: 2rem;
+}
+
+.right .summary {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.right .summary-content {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.right .summary-content .iner {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: space-between;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+}
+
+.right .summary-content .reaction {
+  background-color: var(--light-red-01);
+}
+
+.right .summary-content .memory {
+  background-color: var(--orangey-yellow-01);
+}
+
+.right .summary-content .verbal {
+  background-color: var(--green-teal-01);
+}
+
+.right .summary-content .visual {
+  background-color: var(--cobalt-blue-01);
+}
+
+.right .summary-content .iner div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.right .summary-content .iner .react-title {
+  color: var(--light-red);
+}
+.right .summary-content .iner .memory-title {
+  color: var(--orangey-yellow);
+}
+.right .summary-content .iner .verbal-title {
+  color: var(--green-teal);
+}
+.right .summary-content .iner .visual-title {
+  color: var(--cobalt-blue);
+}
+
+.right .summary-content .iner .percen {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+}
+.right .summary-content .iner .percen span {
+  font-weight: 800;
+  color: black;
+}
+
+.right button {
+  width: 100%;
+  height: 2.4rem;
+  border-radius: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+}
+
+.right button:hover {
+  background-color: var(--light-royal-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    font-size: 14px;
+  }
+  .box {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .left {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .right {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
